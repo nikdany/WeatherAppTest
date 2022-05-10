@@ -1,1 +1,2 @@
-# WeatherApp
+# WeatherAppTest
+SwiftUI, MVVM+C, GraphQL
