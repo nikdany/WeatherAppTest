@@ -1,0 +1,28 @@
+query ForecastResulQuery($name: String!, $config: ConfigInput) {
+  getCityByName(name: $name, config: $config) {
+    id
+    name
+    country
+    weather{
+        ...WeatherFragment
+    }
+  }
+}
+
+fragment WeatherFragment on Weather {
+    summary {
+        title
+        description
+        icon
+    }
+    temperature {
+        actual
+        feelsLike
+        min
+        max
+    }
+    wind {
+        speed
+        deg
+    }
+}
