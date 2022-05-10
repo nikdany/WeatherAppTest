@@ -46,7 +46,7 @@ struct ForecastService {
                 }
 
             case let .failure(error):
-                print("CollectionQuery FAILED with error: \(error)")
+                print("ForecastQuery FAILED with error: \(error)")
                 print("-------------------------------")
                 subject.send(completion: (.failure(error)))
             }
